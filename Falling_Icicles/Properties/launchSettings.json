@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Falling_Icicles": {
+      "commandName": "Project"
+    },
+    "YMM4で動かす": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\shinm\\Desktop\\ゆっくりムービーメーカー４\\YukkuriMovieMaker_v4\\YukkuriMovieMaker.exe"
+    }
+  }
+}

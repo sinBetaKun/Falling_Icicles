@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="Falling_Icicles.LogControl.LogController"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Falling_Icicles.LogControl"
+             mc:Ignorable="d" 
+             Name="this">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resource/MaterialIcons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Border BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}"
+            BorderThickness="2" Padding="4" Margin="4">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="8"/>
+                <ColumnDefinition Width="26"/>
+            </Grid.ColumnDefinitions>
+            <ScrollViewer Grid.Column="0" Height="100">
+                <Grid HorizontalAlignment="Left">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="24" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Name="TextDisplay" Margin="0,0,16,0" TextWrapping="Wrap"/>
+                    <Button Width="16" Grid.Row="1" HorizontalAlignment="Right" Content="{StaticResource Next}"
+                            BorderBrush="Transparent" Background="Transparent" Click="Button_Click"  Margin="4,4,26,4"/>
+                </Grid>
+            </ScrollViewer>
+            <Grid Grid.Column="2" VerticalAlignment="Top">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="26"/>
+                    <RowDefinition Height="26"/>
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" Content="{StaticResource Save-Plus}" Click="Button_Click_1" ToolTip="データをセーブします。"/>
+                <Button Grid.Row="1" Content="{StaticResource Save-Minus}" Click="Button_Click_2" ToolTip="セーブデータを削除します。"/>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>
